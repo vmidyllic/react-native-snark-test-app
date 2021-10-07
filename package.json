@@ -40,7 +40,7 @@
     "react-native-udp": "^2.7.0",
     "readable-stream": "^1.0.33",
     "rn-nodeify": "^10.3.0",
-    "react-native-snarkjs": "0.4.9",
+    "react-native-snarkjs": "0.0.1",
     "stream": "^0.0.2",
     "stream-browserify": "^1.0.0",
     "string_decoder": "^0.10.31",
