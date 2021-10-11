@@ -7,6 +7,10 @@
 const defaultSourceExts = require("metro-config/src/defaults/defaults").sourceExts;
 module.exports = {
   transformer: {
+    babelTransformerPath: require.resolve('react-native-react-bridge/lib/plugin'),
+    // babelTransformerPath: require.resolve(__dirname),
+
+    //'react-native-react-bridge/lib/plugin'
     getTransformOptions: async () => ({
       transform: {
         experimentalImportSupport: false,
@@ -20,13 +24,21 @@ module.exports = {
       fs: require.resolve('react-native-fs'),
       path: require.resolve('react-native-path'),
       os: require.resolve('react-native-os'),
-      // ffjavascript: 'ffjavascript/main.js',
-      // ...aaa,
-      // fs: require.resolve('react-native-fs'),
+      "regenerator-runtime": require.resolve("regenerator-runtime"),
+      // "big-integer": require.resolve("big-integer"),yarn cache clean
+      // "snarkjs": require.resolve("snarkjs"),
+      // "readline": require.resolve("readline"),
+
+
+      
+
+
+
+      snarkjs: require.resolve('/Users/vladyslavmunin/Projects/mobile/react-newsnarkjs/node_modules/react-native-snarkjs/build/snarkjs.js'),
     },
     sourceExts: [
       ...defaultSourceExts,
       'cjs'
-    ],
+    ]
   }
 };

@@ -6,11 +6,14 @@
  * @flow strict-local
  */
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { LogBox, TextInput } from 'react-native';
 import * as s from 'react-native-snarkjs';
 // var RNFS = require('react-native-fs');
+import { WebView } from 'react-native-webview';
 
+import { useBridge } from "react-native-react-bridge";
+import webApp from "./components/web";
 import {
   SafeAreaView,
   ScrollView,
@@ -33,12 +36,14 @@ import {
 
 const inputs = {"a":3, b:"4"}
 
-let wasmFile = "https://{{url}}/circuit.wasm";
-let zkeyFile = "https://{{url}}/circuit_final.zkey";
-let verificationKey = "https://{{url}}/verification_key.json";
+let wasmFile = "https://5d3f-195-39-242-119.ngrok.io/circuit.wasm";
+let zkeyFile = "https://5d3f-195-39-242-119.ngrok.io/circuit_final.zkey";
+let verificationKey = "https://5d3f-195-39-242-119.ngrok.io/verification_key.json";
 
 
 const App = () => {
+
+  const myWebView = useRef();
 
   const [a, setA] = useState("3");
 	const [b, setB] = useState("11");
@@ -57,6 +62,22 @@ const App = () => {
 		setB(e.target.value);
 	};
 
+  // console.log(webApp)
+
+  const { ref, onMessage, emit } = useBridge((message) => {
+    // emit sends message to React
+    //   type: event name
+    //   data: some data which will be serialized by JSON.stringify
+    console.log("I received message")
+    console.log(message)
+    if (message.type === "loader" && message.data === "finished") {
+      setTimeout(()=>{
+        emit({ type: "loader", data: "succeeded!" });
+        console.log("I sent message")
+
+      },4000)
+    }
+  });
 
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -90,22 +111,26 @@ const App = () => {
 
 
   }
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <TextInput  value={text}  onChangeText={setText} />
-    
-        <Button onPress={runProofs} title="Generate Proof"></Button>
-      </ScrollView>
-
-    </SafeAreaView>
-    
-  );
+// function  onMessage( event ) {
+//     console.log( "On Message", event.nativeEvent.data );
+// }
+//  function  sendPostMessage () {
+//     console.log( "Sending post message" );
+//     console.log("here ", myWebView.current)
+//     myWebView.current.postMessage( "Post message from react native")
+//     // myWebView.current.postMessage( "Post message from react native" );
+// } 
+// console.log(source)
+ 
+return (
+  <WebView
+    // ref, source and onMessage must be passed to react-native-webview
+    ref={ref}
+    source={{ html: webApp }}
+    style={{marginTop:200, height:400 , backgroundColor: 'green'}}
+    onMessage={onMessage}
+  />
+);
 };
 
 const styles = StyleSheet.create({
