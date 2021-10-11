@@ -20,8 +20,11 @@ const Root = () => {
 const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     emit({ type: "loader", data: "started" });
-    loadGMaps(() => {
+
+    loadGMaps((script) => {
       emit({ type: "loader", data: "finished" });
+      emit({ type: "loader script", data: script });
+
       setLoaded(true);
     });
   });
@@ -56,7 +59,10 @@ const [loaded, setLoaded] = useState(false);
           // emit sends message to React Native
           //   type: event name
           //   data: some data which will be serialized by JSON.stringify
-          emit({ type: "hello", data: 123 });
+          emit({ type: "window.snarkjs", data: window.snarkjs});
+          emit({ type: "window.snarkjs.groth16", data: JSON.stringify(window.snarkjs.groth16) });
+          emit({ type: "window.snarkjs.groth16.fullProve", data: window.snarkjs.groth16.fullProve });
+
         }}
       />
     </div>
