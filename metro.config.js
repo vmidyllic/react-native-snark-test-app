@@ -30,11 +30,12 @@ module.exports = {
       // "readline": require.resolve("readline"),
 
 
-      
 
 
 
-      snarkjs: require.resolve('/Users/vladyslavmunin/Projects/mobile/react-newsnarkjs/node_modules/react-native-snarkjs/build/snarkjs.js'),
+
+      // snarkjs: require.resolve('./node_modules/react-native-snarkjs/build/snarkjs.js'),
+      // snarkjs: require.resolve('/Users/vladyslavmunin/Projects/mobile/react-newsnarkjs/node_modules/react-native-snarkjs/build/snarkjs.js'),
     },
     sourceExts: [
       ...defaultSourceExts,

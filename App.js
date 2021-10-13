@@ -8,7 +8,7 @@
 
 import React, { useRef, useState } from 'react';
 import { LogBox, TextInput } from 'react-native';
-import * as s from 'react-native-snarkjs';
+// import * as s from 'react-native-snarkjs';
 // var RNFS = require('react-native-fs');
 import { WebView } from 'react-native-webview';
 
@@ -40,11 +40,11 @@ let wasmFile = "https://5d3f-195-39-242-119.ngrok.io/circuit.wasm";
 let zkeyFile = "https://5d3f-195-39-242-119.ngrok.io/circuit_final.zkey";
 let verificationKey = "https://5d3f-195-39-242-119.ngrok.io/verification_key.json";
 
-
+// import   * as s  from "react-native-snarkjs/build/main";
 const App = () => {
 
   const myWebView = useRef();
-
+  // console.log(s);
   const [a, setA] = useState("3");
 	const [b, setB] = useState("11");
 
@@ -91,7 +91,7 @@ const App = () => {
     s.groth16.fullProve(inputs, wasmFile, zkeyFile,console).then(({ proof, publicSignals }) =>{
       console.log(proof)
       console.log(publicSignals)
-      
+
       fetch(verificationKey).then(function (res) {
          res.json().then((res2)=>{
           console.log("start verifikation",res2)
@@ -103,10 +103,10 @@ const App = () => {
 
           })
         })
-      
+
       });
-    
-      
+
+
     });
 
 
@@ -119,16 +119,26 @@ const App = () => {
 //     console.log("here ", myWebView.current)
 //     myWebView.current.postMessage( "Post message from react native")
 //     // myWebView.current.postMessage( "Post message from react native" );
-// } 
+// }
 // console.log(source)
- 
+
+  const onMymessage = (e) => {
+    const { nativeEvent } = e;
+    const { data } = nativeEvent;
+
+    // console.log(nativeEvent);
+    console.log(JSON.parse(data));
+    // emit({ type: "loader", data: "succeeded!" });
+    emit({ type: "towebview", data: "succeeded!" });
+  }
 return (
   <WebView
     // ref, source and onMessage must be passed to react-native-webview
     ref={ref}
-    source={{ html: webApp }}
-    style={{marginTop:200, height:400 , backgroundColor: 'green'}}
-    onMessage={onMessage}
+    source={{ uri: 'https://e306-95-158-35-18.ngrok.io' }}
+    style={{marginTop:0, height:'100%' , backgroundColor: 'green'}}
+    // onMessage={onMessage}
+    onMessage={onMymessage}
   />
 );
 };
