@@ -1083,7 +1083,7 @@
 
 "@iden3/binfileutils@0.0.8":
   version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@iden3/binfileutils/-/binfileutils-0.0.8.tgz#d1d349bdbaa9f0a99644232c7d75ea0db98ea1c7"
+  resolved "https://registry.npmjs.org/@iden3/binfileutils/-/binfileutils-0.0.8.tgz"
   integrity sha512-/GqTsujUssGuQY+sd/XaLrA+OiCwzm+6yH28C57QQDWCHET2Logry9fGxU10n6XKdhCQBjZ7T/YMQkLwwkpRTQ==
   dependencies:
     fastfile "0.0.19"
@@ -2541,7 +2541,7 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
 
 circom_runtime@0.1.13:
   version "0.1.13"
-  resolved "https://registry.yarnpkg.com/circom_runtime/-/circom_runtime-0.1.13.tgz#90f86f35d989c48d4c27595b94664ea6918fbede"
+  resolved "https://registry.npmjs.org/circom_runtime/-/circom_runtime-0.1.13.tgz"
   integrity sha512-vmv19/0p5OTe5uCI7PWqPtB5vPoYWjczqKYnabaC5HOxX99R4K1MuNqEXsNEAoEfZrmfAQd7vXLcATN9NVnsPA==
   dependencies:
     ffjavascript "0.2.35"
@@ -3591,7 +3591,7 @@ fb-watchman@^2.0.0:
 
 ffjavascript@0.2.35:
   version "0.2.35"
-  resolved "https://registry.yarnpkg.com/ffjavascript/-/ffjavascript-0.2.35.tgz#9166d95173b1c0a743b455bb03a72b581922a42e"
+  resolved "https://registry.npmjs.org/ffjavascript/-/ffjavascript-0.2.35.tgz"
   integrity sha512-xnC51tWbi0ah4SH+02jEfJyO+P+NiZWnxQrLDLtBYY1Dv3QM5ydxzd+gxnLEfWdT8i1bMM5pIh5P25l6fNCaVQ==
   dependencies:
     big-integer "^1.6.48"
@@ -3600,7 +3600,7 @@ ffjavascript@0.2.35:
 
 ffjavascript@0.2.37:
   version "0.2.37"
-  resolved "https://registry.yarnpkg.com/ffjavascript/-/ffjavascript-0.2.37.tgz#13b93c0104013f99d8959e159430d6aa76bd9a6c"
+  resolved "https://registry.npmjs.org/ffjavascript/-/ffjavascript-0.2.37.tgz"
   integrity sha512-wWOkQB07d6eKFRMMtryTVsWrMsR4ImdikhEuu6ZcFYaxufJaBKUiQHYxsPzZEScPa+okkHzf1/2YVPU7xUIHMQ==
   dependencies:
     big-integer "^1.6.48"
@@ -3609,7 +3609,7 @@ ffjavascript@0.2.37:
 
 ffjavascript@^0.2.30:
   version "0.2.38"
-  resolved "https://registry.yarnpkg.com/ffjavascript/-/ffjavascript-0.2.38.tgz#920832795be1e60a12832da80692b6c86259f3b7"
+  resolved "https://registry.npmjs.org/ffjavascript/-/ffjavascript-0.2.38.tgz"
   integrity sha512-b4dobcci6QxxUvNYFCHw2ONhXwtgSHCzqxbH6c7ipWMOzyoG+MPRMZgAqnUREYX8UC6zqA7AiRmiIB76nxt2TQ==
   dependencies:
     big-integer "^1.6.48"
@@ -6491,7 +6491,7 @@ queue-microtask@^1.2.2:
 
 r1csfile@0.0.32:
   version "0.0.32"
-  resolved "https://registry.yarnpkg.com/r1csfile/-/r1csfile-0.0.32.tgz#64a6c63ff76b737b3ee22bcedb2bb9a033cbeb1a"
+  resolved "https://registry.npmjs.org/r1csfile/-/r1csfile-0.0.32.tgz"
   integrity sha512-DkRXeOg0iRmfhgIuWICvdkOiLHpyb7+AcUd/WHpqBJEUp27pe7wKXBR4Jr3TPYCT4sTV9a/F3bovyAC4wystnQ==
   dependencies:
     "@iden3/bigarray" "0.0.2"
@@ -6548,7 +6548,7 @@ react-is@^16.8.1:
 
 react-native-binfileutils@0.0.3:
   version "0.0.3"
-  resolved "https://registry.yarnpkg.com/react-native-binfileutils/-/react-native-binfileutils-0.0.3.tgz#3b9f74b01a5e41e1dbce25486ca4142a16ca0948"
+  resolved "https://registry.npmjs.org/react-native-binfileutils/-/react-native-binfileutils-0.0.3.tgz"
   integrity sha512-4WzFAy7Cb1jbysqR/Cm9u4efghKpXtXAowjNDvx2OU1CwEQA4B+sU2OwJFV1FVAmjJpjTb995i4IWjLUzCkMnA==
   dependencies:
     fastfile "0.0.19"
@@ -6624,7 +6624,7 @@ react-native-path@^0.0.5:
 
 react-native-r1csfile@0.0.3:
   version "0.0.3"
-  resolved "https://registry.yarnpkg.com/react-native-r1csfile/-/react-native-r1csfile-0.0.3.tgz#0041f48999afd1484da0b985a4d17b391c9c908c"
+  resolved "https://registry.npmjs.org/react-native-r1csfile/-/react-native-r1csfile-0.0.3.tgz"
   integrity sha512-fAJ0WpGI7Ligm/N568ULBIRFG28GRfwBfkI8LiqOvACWm67p19YBTf783Yb4irfQ2tcGpf7lkNOHda4KWsrNbw==
   dependencies:
     "@iden3/bigarray" "0.0.2"
@@ -6649,7 +6649,7 @@ react-native-react-bridge@^0.8.1:
 
 react-native-snarkjs@0.0.4:
   version "0.0.4"
-  resolved "https://registry.yarnpkg.com/react-native-snarkjs/-/react-native-snarkjs-0.0.4.tgz#f1511d4b328b8a08a3639aa9ae6875c49211c2f7"
+  resolved "https://registry.npmjs.org/react-native-snarkjs/-/react-native-snarkjs-0.0.4.tgz"
   integrity sha512-99PH9VHRntuJ+JywYg9Vsay1Tv/V4FRX9iKZr4ruU/ROnm9imqdImdJz3RLBqCowQRyB1+SGvmKOsakVhGkF+w==
   dependencies:
     blake2b-wasm "^2.3.0"
@@ -7315,7 +7315,7 @@ snapdragon@^0.8.1:
 
 snarkjs@^0.4.7:
   version "0.4.7"
-  resolved "https://registry.yarnpkg.com/snarkjs/-/snarkjs-0.4.7.tgz#d4f8e854896705ec746ca91742b076333efb7083"
+  resolved "https://registry.npmjs.org/snarkjs/-/snarkjs-0.4.7.tgz"
   integrity sha512-gehpEKZwhBZEYPLokfBqtHIxaHHy50LYDI4xFVopNEwICInHPIbG4nJ0nJ1vgqz+bv824UFQC84XnQ0C/mPjag==
   dependencies:
     "@iden3/binfileutils" "0.0.8"
